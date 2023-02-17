@@ -3,3 +3,4 @@ sweetviz
 pandas_profiling
 streamlit_pandas_profiling
 openpyxl
+xlrd
