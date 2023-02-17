@@ -15,13 +15,13 @@ from PIL import Image
 ###################################################################################################################
 #funções
 
-@st.cache_data
+@st.cache_data(suppress_st_warning=True)
 def st_display_sweetviz(report_html,width=1000,height=500):
 	report_file = codecs.open(report_html,'r')
 	page = report_file.read()
 	components.html(page,width=width,height=height,scrolling=True)
 
-@st.cache_data	
+@st.cache_data(suppress_st_warning=True)
 def generate_report_sweetviz(df, target):
 	if target == False:
 		my_report = sv.analyze(df)
@@ -34,7 +34,7 @@ def generate_report_sweetviz(df, target):
 	with open("SWEETVIZ_REPORT.html", "rb") as file:
 	     btn = st.download_button(label="Download do relatório Sweetviz", data=file, file_name="SWEETVIZ_REPORT.html")
 
-@st.cache_data	
+@st.cache_data(suppress_st_warning=True)
 def generate_report_pandas_profiling(df):
 	profile = ProfileReport(df)
 	st_profile_report(profile)
