@@ -3,7 +3,6 @@
 
 import sweetviz as sv
 import pandas as pd
-import pandas_profiling
 from streamlit_pandas_profiling import st_profile_report
 from pandas_profiling import ProfileReport
 import streamlit as st
